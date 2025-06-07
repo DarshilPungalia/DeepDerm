@@ -18,7 +18,8 @@ This repository implements and compares three core modeling paradigms:
 |----------|------------|-------------|-------------|
 | `AutoEncoder-Classifier.ipynb` | Autoencoder + Classifier | Learns latent embeddings before classification. Ideal for denoising and capturing compact lesion representations. | Poor |
 | `CNN-Classifier.ipynb` | Standard CNN | Baseline convolutional classifier trained end-to-end on lesion images. | Excellent |
-| `DataFrame-Classifier.ipynb` | Tabular Model | Classifier built on engineered features or metadata, useful for clinical context integration. | Good |
+| `MultiModal-Classifier.ipynb` | MultiModal NN | Multimodal classifier trained end-to-end on lesion images and their corresponding tabular data. | Satisfactory |
+| `DeepDerm.py`                  | Unified Inference Module | Production-ready interface that supports image-only or multimodal prediction using pre-trained Keras models and joblib pipelines. Includes device placement, input validation, and caching. | –            |
 
 ---
 
@@ -26,7 +27,7 @@ This repository implements and compares three core modeling paradigms:
 
 - Supports image input similar to real-world mobile captures  
 - Includes **autoencoder-based feature learning** for improved latent representation  
-- Implements **multi-head classification** variants to tackle class imbalance or multi-task extensions  
+- Implements **multi-modal classification** variants to tackle class imbalance or multi-task extensions  
 - Easily extensible for **ensemble learning** or feature fusion across representations  
 
 ---
